@@ -1,8 +1,8 @@
 package TravelSystem;
 
-public class TravelManage implements TravelManageInterface{
+public class TravelManage implements InterfaceZip{
     private int visitor=15;
-    public TravelManage(int visitor){
+    public TravelManage(){
 
         this.visitor=visitor;
     }
@@ -28,6 +28,26 @@ public class TravelManage implements TravelManageInterface{
             System.out.println("여기는 이민심사대입니다. 여행은 반대편입니다.");
         }
         else{System.out.println("환영합니다 여행입국심사대입니다.");}
+
+    }
+
+    @Override
+    public void immigration() {
+
+    }
+
+    @Override
+    public void citizennum() {
+
+    }
+
+    @Override
+    public void immigration(KoreaCitizen koreaCitizen) {
+
+    }
+
+    @Override
+    public void license(KoreaCitizen koreaCitizen) {
 
     }
 }
