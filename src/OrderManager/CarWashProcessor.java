@@ -6,15 +6,16 @@ import java.util.TimerTask;
 
 
 
-class Announcement {
-    private Timer timer;
+class CarWashProcessor {
+    private final Timer timer;
+    //
     private int elapsedTime;
     private int costPerSecond;
     private Scanner sc;
     private boolean extensionRequested;
     private boolean timerPaused = false;
 
-    public Announcement() {
+    public CarWashProcessor() {
         this.sc = new Scanner(System.in);
         this.timer = new Timer();
         this.elapsedTime = 0;
@@ -75,17 +76,19 @@ class Announcement {
         System.out.println("[이벤트! 원하시는 방법을 고르시면]");
         System.out.println("[첫번째 순서에 무료로 사용 가능합니다]");
         System.out.println("[결제는 마지막에 정산됩니다]");
+        // Enum 순회 출력해보기
         System.out.println("1.[고압수 세척] ");
         System.out.println("2.[버블폼]");
         System.out.println("3.[브러쉬 모드]");
         System.out.println("4.[종료]");
+        //
         int selectedWay = sc.nextInt();
         System.out.println(getWayName(selectedWay));
         startCountUpTimer();
     }
 
     private String getWayName(int selectedWay) {
-        switch (selectedWay) {
+        switch (selectedWay) {  // Enum 적용해보기
             case 1:
                 return "[고압수 세척]";
             case 2:
