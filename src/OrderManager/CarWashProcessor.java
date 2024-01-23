@@ -7,6 +7,7 @@ import java.util.TimerTask;
 
 
 class CarWashProcessor {
+    //주요기능을 수행하는 클래스.
     private final Timer timer;
     //
     private int elapsedTime;
