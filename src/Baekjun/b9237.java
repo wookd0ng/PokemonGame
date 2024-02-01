@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class b9237 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n=0; //묘목의 개수
+        int n = 0; //묘목의 개수
         n= sc.nextInt(); //묘목의 갯수를 첫째줄에 입력받음
 
         //각 묘목이 다 자라는데 걸리는 일수. 정렬
