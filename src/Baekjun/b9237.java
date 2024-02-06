@@ -1,25 +1,43 @@
 package Baekjun;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class b9237 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = 0; //묘목의 개수
-        n= sc.nextInt(); //묘목의 갯수를 첫째줄에 입력받음
+        int n = sc.nextInt(); //묘목의 개수를 입력받는 n
+//        System.out.println("묘목의 개수는"+n);
+        Integer [] arr = new Integer[n]; //입력받은 갯수만큼 배열 생성
+        for(int i=0; i<arr.length; i++){
+            arr[i] = sc.nextInt();
 
-        //각 묘목이 다 자라는데 걸리는 일수. 정렬
-        //한개 심는데 하루 소요
-        //답이 여러 가지인 경우에는 가장 작은 값 출력
-        /*
-        4
-        2 3 4 3
+        }
+        Arrays.sort(arr,Collections.reverseOrder());
+        int maxResult = Integer.MIN_VALUE; // 최댓값을 저장할 변수를 가장 작은 값으로 초기화합니다.
 
-        결과값 ==7
+        for(int i=0; i<n; i++){
+            int result=arr[i]-(n-i);
+//            System.out.println(result+" ");
 
-        묘목의 개수는 4.
+            if (result > maxResult) {
+                maxResult = result;
+            }
+        }
 
-         */
+        int finalResult = maxResult + n + 2;
+        System.out.println(finalResult);
+
+
+
+//        for(int tree: arr) {
+//            for (int x = n; x < n+1; x--) {
+//                System.out.println(tree);
+//            }
+//        }
+
+
 
     }
 }
